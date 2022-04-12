@@ -1,0 +1,17 @@
+{
+  "name": "flutterwave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sam",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "flutterwave-node-v3": "^1.0.9",
+    "uuid": "^8.3.2"
+  }
+}
