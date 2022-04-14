@@ -28,8 +28,3 @@ const payload = {
 flw.Charge.card(payload)
   .then((response) => console.log("RES", response))
   .catch((e) => console.log(e));
-
-const response = await flw.Charge.validate({
-    otp: req.body.otp,
-    flw_ref: req.session.flw_ref,
-  });
