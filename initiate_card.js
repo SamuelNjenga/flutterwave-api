@@ -11,15 +11,20 @@ const payload = {
   cvv: "564",
   expiry_month: "09",
   expiry_year: "32",
-  currency: "NGN",
+  currency: "KES",
   amount: "7500",
   email: "developers@flutterwavego.com",
   fullname: "Flutterwave Developers",
   tx_ref: "MC-3243e",
   redirect_url: "https://your-awesome.app/payment-redirect",
   enckey: process.env.FLW_ENCRYPTION_KEY,
+  authorization: {
+    mode: "pin",
+    pin: "3310",
+  },
 };
 
+// I will be calling the charge card endpoint twice—the first time to find out the authorization mode, and the second to authorize the charge
 flw.Charge.card(payload)
   .then((response) => console.log("RES", response))
   .catch((e) => console.log(e));
